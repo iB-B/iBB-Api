@@ -6,7 +6,7 @@ const listingSchema = new mongoose.Schema({
     required: true
   },
   dateAvail: {
-    type: Date,
+    type: String,
     required: true
   },
   date: {
