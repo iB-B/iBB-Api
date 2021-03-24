@@ -63,7 +63,7 @@ app.use(exampleRoutes)
 app.use(userRoutes)
 app.use(listingRoutes)
 app.use(gemRoutes)
-app.usse(reviewRoutes)
+app.use(reviewRoutes)
 
 
 // register error handling middleware
