@@ -1,16 +1,32 @@
 const mongoose = require('mongoose')
 
 const listingSchema = new mongoose.Schema({
-  location: {
+  name: {
     type: String,
     required: true
   },
-  dateAvail: {
+  address: {
     type: String,
     required: true
   },
-  date: {
-    type: Date,
+  city: {
+    type: String,
+    required: true
+  },
+  stateProvince: {
+    type: String,
+    required: true
+  },
+  postalCode: {
+    type: String,
+    required: true
+  },
+  latitude: {
+    type: String,
+    required: true
+  },
+  longitude: {
+    type: String,
     required: true
   },
   price: {
@@ -19,6 +35,10 @@ const listingSchema = new mongoose.Schema({
   },
   description: {
     type: String,
+    required: true
+  },
+  date: {
+    type: Date,
     required: true
   },
   // only the owner can edit the listing.
@@ -34,11 +54,16 @@ const listingSchema = new mongoose.Schema({
     transform: (_doc, listing) => {
       return {
         id: listing._id,
-        location: listing.location,
-        dateAvail: listing.dateAvail,
-        date: listing.date.toDateString(),
+        name: listing.name,
+        address: listing.address,
+        city: listing.city,
+        stateProvince: listing.stateProvince,
+        postalCode: listing.postalCode,
+        latitude: listing.latitude,
+        longitude: listing.longitude,
         price: listing.price,
-        description: listing.description
+        description: listing.description,
+        date: listing.date.toDateString()
       }
     }
   }

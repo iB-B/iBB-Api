@@ -7,7 +7,7 @@ const cors = require('cors')
 const exampleRoutes = require('./app/routes/example_routes')
 const userRoutes = require('./app/routes/user_routes')
 const listingRoutes = require('./app/routes/listing_routes')
-const gemRoutes = require('./app/routes/gem_routes')
+// const gemRoutes = require('./app/routes/gem_routes')
 const reviewRoutes = require('./app/routes/review_routes')
 
 // require middleware
@@ -62,7 +62,7 @@ app.use(requestLogger)
 app.use(exampleRoutes)
 app.use(userRoutes)
 app.use(listingRoutes)
-app.use(gemRoutes)
+// app.use(gemRoutes)
 app.use(reviewRoutes)
 
 

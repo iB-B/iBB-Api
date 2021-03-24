@@ -29,8 +29,7 @@ const gemSchema = new mongoose.Schema({
   imgAlt: {
     type: String,
     required: false
-  },
-  reviews: [reviewSchema]
+  }
 })
 
 module.exports = mongoose.model('gem', gemSchema)
