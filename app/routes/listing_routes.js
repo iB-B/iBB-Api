@@ -50,7 +50,7 @@ router.get('/listings', (req, res, next) => {
 
 // SHOW
 // GET /listings/:id
-router.get('/listings/:id', requireToken, (req, res, next) => {
+router.get('/listings/:id', (req, res, next) => {
   const id = req.params.id
 
   Listing.findOne({ _id: id })
