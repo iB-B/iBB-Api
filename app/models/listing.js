@@ -37,10 +37,6 @@ const listingSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  date: {
-    type: Date,
-    required: true
-  },
   // only the owner can edit the listing.
   owner: {
     type: mongoose.Schema.Types.ObjectId,
@@ -62,8 +58,7 @@ const listingSchema = new mongoose.Schema({
         latitude: listing.latitude,
         longitude: listing.longitude,
         price: listing.price,
-        description: listing.description,
-        date: listing.date.toDateString()
+        description: listing.description
       }
     }
   }
