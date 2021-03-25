@@ -70,4 +70,3 @@ const listingSchema = new mongoose.Schema({
 })
 
 module.exports = mongoose.model('listing', listingSchema)
-
