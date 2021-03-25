@@ -23,11 +23,11 @@ const listingSchema = new mongoose.Schema({
   },
   latitude: {
     type: String,
-    required: true
+    required: false
   },
   longitude: {
     type: String,
-    required: true
+    required: false
   },
   price: {
     type: Number,
