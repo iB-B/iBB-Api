@@ -23,11 +23,11 @@ const listingSchema = new mongoose.Schema({
   },
   latitude: {
     type: String,
-    required: true
+    required: false
   },
   longitude: {
     type: String,
-    required: true
+    required: false
   },
   price: {
     type: Number,
@@ -70,4 +70,3 @@ const listingSchema = new mongoose.Schema({
 })
 
 module.exports = mongoose.model('listing', listingSchema)
-
